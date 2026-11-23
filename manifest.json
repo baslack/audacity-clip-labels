@@ -1,0 +1,28 @@
+{
+  "uri": "extension://baslack/clip-labels",
+  "type": "macros",
+  "title": "Clip Labels",
+  "description": "Adds one label per audio clip with an auto-incrementing code, ready for Export Audio (separate files by labels).",
+  "version": "0.1.0",
+  "apiversion": 2,
+  "actions": [
+    {
+      "code": "noop",
+      "path": "noop.js",
+      "title": "Clip Labels (no-op)",
+      "show_on_appmenu": false
+    }
+  ],
+  "contributes": {
+    "audacity.effects": [
+      {
+        "id": "clip-labels",
+        "title": "Label Clips",
+        "description": "Adds one label per clip on the selected track(s), named PREFIX_1000, PREFIX_1100, ... in timeline order.",
+        "vendor": "baslack",
+        "group": "analyze",
+        "script": "clip-labels.js"
+      }
+    ]
+  }
+}
